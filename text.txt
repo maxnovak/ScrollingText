@@ -1,0 +1,4 @@
+usr
+desktop
+stuff
+home
