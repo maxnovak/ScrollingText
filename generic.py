@@ -1,12 +1,16 @@
-import csv
-import random
-with open('text.txt', 'rb') as csvfile:
-    directoryNames  = csv.reader(csvfile, delimiter = ' ', quotechar='|')
-    items = []
-    for item in directoryNames:
-        items.append(item)
-    print items
-    for i in range(10):
-        rand = random.randint(1,len(items)-1)
-        rand1 = random.randint(1,len(items)-1)
-        print ' '.join(items[rand]) + '/' + ' '.join(items[rand1])
+import os, time
+top = "/"
+i = 1
+for root, dirs, files in os.walk(top, topdown=True):
+    print root #the path im starting at
+    print "--------------"
+    print dirs #should randomly choose which to go into
+    print "*****************"
+    print files #Don't care about files right now
+    time.sleep(0.05)
+    i += 1
+    if i > 1:
+        break
+
+
+
