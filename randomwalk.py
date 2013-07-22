@@ -10,7 +10,10 @@ def random_walk(top = "/"):
         path = os.path.join(top,f)
         if os.path.isdir(path):
             print path
-            random_walk(path)
+            try:
+                random_walk(path)
+            except OSError:
+                pass
         else:
             print path
         if len(top) >10:
