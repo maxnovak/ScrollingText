@@ -1,9 +1,11 @@
-
 import sys
 import time
+import random
 
 from progressbar import Bar, ETA,  ProgressBar, ReverseBar, FileTransferSpeed, Percentage, RotatingMarker, SimpleProgress
-
+def loadbars():
+    bars = [loadbar0,loadbar1,loadbar2,loadbar3,loadbar4,loadbar5,loadbar6]
+    bars[random.randint(0,6)]()
 
 def loadbar0():
     pbar = ProgressBar(widgets=[Percentage(), Bar()], maxval=300).start()
@@ -77,3 +79,5 @@ def loadbar6():
         pbar.update(i + 1)
     pbar.finish()
 
+if __name__ == "__main__":
+    loadbars()

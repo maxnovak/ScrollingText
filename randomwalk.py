@@ -6,7 +6,7 @@ import loadbars
 def random_walk(top = "/"):
     """recursively walks through folders and displays files, psuedo randomly jumps out of files and back up the path"""
     if random.randint(1,100) == 20:
-        loadbars.loadbar1()
+        loadbars.loadbars()
 
     files = os.listdir(top)
     for f in files:
