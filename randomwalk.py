@@ -19,8 +19,6 @@ def random_walk(top = "/"):
                 pass
         else:
             print path
-      #  if len(top) >10:
-      #      break
         if random.random() < 0.2:
             break
         time.sleep(0.05)
